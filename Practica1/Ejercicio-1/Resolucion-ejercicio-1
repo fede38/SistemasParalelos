@@ -1,0 +1,22 @@
+Al hacer multiplicación de matrices es preferible organizar la segunda matriz por columnas, porque es la manera en la que la vamos a recorrer al hacer la multiplicación.
+
+Al correr el programa en el que la matriz B esta organizada por columnas los tiempos fueron:
+
+- 512x512 con matriz B por columnas = 7.509471 segundos
+- 1024x1024 con matriz B por columnas = 61.153188 segundos
+- 2048x2048 con matriz B por columnas = Mas de 10 minutos
+
+- 512x512 con matriz B por filas = 18.186482 segundos
+- 1024x1024 con matriz B por filas = 158.809802 segundos
+- 2048x2048 con matriz B por filas = Mas de 30 minutos
+
+Lo mismo pero con optimización del compilador -O3:
+- 512x512 con matriz B por columnas = 0.424883 segundos
+- 1024x1024 con matriz B por columnas = 3.414957 segundos
+- 2048x2048 con matriz B por columnas = 26.783512 segundos
+
+- 512x512 con matriz B por filas = 2.108477 segundos
+- 1024x1024 con matriz B por filas = 30.107860 segundos
+- 2048x2048 con matriz B por filas = 441.358058 segundos
+
+La mejora se produce por tener la matriz B organizada por columnas y la A por filas en vez de tener ambas organizadas por filas.
